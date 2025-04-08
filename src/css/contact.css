@@ -1,0 +1,147 @@
+.contact-form {
+  font-family: "roboto", sans-serif;
+  width: 460px;
+  max-width: 100vw;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+  padding: 0 0 40px;
+  border-radius: 3px;
+  color: #ddd;
+  padding-top: 1px;
+}
+
+.contact-form input::-webkit-input-placeholder,
+.contact-form textarea::-webkit-input-placeholder {
+  font: inherit;
+  -webkit-transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out,
+    visibility 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out,
+    visibility 0.3s ease-in-out;
+}
+
+.contact-form label {
+  display: none;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font: inherit;
+  font-size: 0.8em;
+  margin: 28px 25px 10px;
+  width: 400px;
+  display: block;
+  border: none;
+  padding: 20px 0 10px;
+  border-bottom: solid 1px var(--color-accent-200);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 96%,
+    var(--color-accent-200) 4%
+  );
+  background-position: -400px 0;
+  background-size: 400px 100%;
+  background-repeat: no-repeat;
+  transition: background 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  resize: none;
+  overflow: hidden;
+  position: relative;
+}
+.contact-form input:focus::-webkit-input-placeholder,
+.contact-form textarea:focus::-webkit-input-placeholder {
+  color: var(--color-accent-200);
+}
+.contact-form input:focus,
+.contact-form input:valid,
+.contact-form textarea:focus,
+.contact-form textarea:valid {
+  box-shadow: none;
+  outline: none;
+  background-position: 0 0;
+}
+.contact-form input:focus::-webkit-input-placeholder,
+.contact-form input:valid::-webkit-input-placeholder,
+.contact-form textarea:focus::-webkit-input-placeholder,
+.contact-form textarea:valid::-webkit-input-placeholder {
+  font-size: 0.8em;
+  transform: translateY(-20px);
+  visibility: visible !important;
+  display: block;
+  opacity: 1;
+}
+
+.contact-form input[type="email"] {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 96%,
+    var(--color-accent-200) 4%
+  );
+  background-position: -400px 0;
+  background-repeat: no-repeat;
+  transition: border-bottom 0.3s ease, background 0.3s ease;
+}
+.contact-form input[type="email"] ~ span.validation-text {
+  visibility: hidden;
+  color: red;
+  transition: color 0.3s ease-in-out;
+}
+.contact-form input[type="email"]:not([value=""])::-webkit-input-placeholder {
+  font-size: 0.8em;
+  transform: translateY(-20px);
+  visibility: visible !important;
+  opacity: 1;
+  display: block;
+}
+.contact-form
+  input[type="email"]:not([value=""]):focus::-webkit-input-placeholder {
+  color: var(--color-accent-200);
+}
+.contact-form
+  input[type="email"]:not([value=""]):focus:not(
+    :valid
+  )::-webkit-input-placeholder {
+  color: #e91e63;
+}
+.contact-form input[type="email"]:focus {
+  background-position: 0 0;
+}
+.contact-form input[type="email"]:focus:not(:valid):not([value=""]) {
+  border-bottom: solid 1px #e91e63;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 96%,
+    #e91e63 4%
+  );
+}
+.contact-form input[type="email"]:not(:focus):not(:valid):not([value=""]) {
+  border-bottom: solid 1px #e91e63;
+  background-position: 0 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 96%,
+    #e91e63 4%
+  );
+}
+.contact-form
+  input[type="email"]:not(:focus):not(:valid):not(
+    [value=""]
+  )::-webkit-input-placeholder {
+  color: #e91e63;
+}
+.contact-form
+  input[type="email"]:not(:focus):not(:valid):not([value=""])
+  ~ span.validation-text {
+  visibility: visible;
+  color: #e91e63;
+}
+
+@media (max-width: 500px) {
+  .contact-form {
+    width: 95%;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: calc(95% - 50px);
+  }
+  .contact-form input[type="email"] {
+    width: calc(95% - 50px);
+  }
+}

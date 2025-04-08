@@ -1,0 +1,67 @@
+.cards:hover > .card::after {
+  opacity: 1;
+}
+
+.card {
+  --mouse-x: 0px;
+  --mouse-y: 0px;
+  --glow-color: #ffffff15;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.card-li {
+  border-radius: 10px;
+
+  cursor: pointer;
+  min-width: 320px;
+  aspect-ratio: 3/2;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card::before,
+.card::after {
+  border-radius: inherit;
+  content: "";
+  height: 100%;
+  left: 0px;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  transition: opacity 500ms;
+  width: 100%;
+}
+
+.card::before {
+  background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y),
+    var(--glow-color),
+    transparent 40%
+  );
+  z-index: 3;
+}
+
+.card-li::after {
+  background: radial-gradient(
+    600px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.5),
+    transparent 40%
+  );
+  z-index: 1;
+}
+
+.card > .card-content {
+  background-color: var(--color-zinc-900);
+  border-radius: inherit;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  inset: 1px;
+  position: absolute;
+  z-index: 2;
+}
