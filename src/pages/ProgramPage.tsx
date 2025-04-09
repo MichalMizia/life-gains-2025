@@ -25,7 +25,7 @@ const ProgramPage = ({}: ProgramPageProps) => {
     <main className="">
       <section className="py-8 md:py-10 lg:py-12 min-h-[calc(100dvh-90px)] flex items-center">
         <div className="absolute inset-0 -z-10 w-full h-full bg-gradient-to-br from-neon/10 via-transparent to-accent-200/5"></div>
-        <div className="container-md flex flex-col-reverse xl:flex-row items-center justify-center gap-x-8 gap-y-8">
+        <div className="container-md flex flex-col-reverse lg:flex-row items-center justify-center gap-x-8 gap-y-8">
           <div className="flex-1 max-w-3xl mx-auto">
             <p className="text-base/7 relative top-1 left-0.5 font-semibold text-accent-200">
               Out now!
@@ -72,17 +72,17 @@ const ProgramPage = ({}: ProgramPageProps) => {
             >
               <Button
                 variant="primary"
-                className="flex-1 max-w-[400px] font-serif text-2xl md:text-h4"
+                className="flex-1 mt-3 max-w-[400px] font-serif text-lg md:text-2xl lg:text-h4"
               >
                 <a href="#get-it-now">Chcę darmowy plan!</a>
               </Button>
             </motion.div>
           </div>
-          <div className="flex-[1.2] flex items-center justify-center">
+          <div className="lg:flex-[1.2] flex items-center justify-center">
             <img
               src={"/images/program.webp"}
               alt="BreakOut Program Preview"
-              className="!w-full !h-fit !m-auto"
+              className="w-full h-fit m-auto"
             />
           </div>
         </div>
@@ -106,15 +106,15 @@ const ProgramPage = ({}: ProgramPageProps) => {
           >
             Cechy
           </h2>
-          <ul className="grid gap-2 nav:grid-cols-2 max-w-[810px] xl:max-w-[1220px] flex-[2] xl:grid-cols-3">
-            <GlowCard className="!h-32 max-w-[400px] mx-auto nav:mx-0 !w-full">
+          <ul className="grid gap-2 md:grid-cols-2 max-w-[810px] xl:max-w-[1220px] flex-[2] xl:grid-cols-3">
+            <GlowCard className="!h-32 max-w-[400px] mx-auto md:mx-0 !w-full">
               <div className="card-info-title px-5 py-4">
-                <h3 className="text-h3 gap-1 font-bold text-white">
+                <h3 className="text-h5 flex items-start justify-start gap-1 font-bold text-white">
                   <GaugeIcon
                     className="stroke-zinc-300 inline -translate-y-0.5 mr-1.5 w-6 h-6"
                     strokeWidth={2.5}
                   />
-                  Intermediate
+                  Średniozaawansowany
                 </h3>
                 <h4>
                   Stworzony dla trójboistów którzy zaczynają odczuwać pierwsze
@@ -122,7 +122,7 @@ const ProgramPage = ({}: ProgramPageProps) => {
                 </h4>
               </div>
             </GlowCard>
-            <GlowCard className="!h-32 max-w-[400px] !w-full mx-auto nav:mx-0">
+            <GlowCard className="!h-32 max-w-[400px] !w-full mx-auto md:mx-0">
               <div className="card-info-title px-5 py-4">
                 <h3 className="text-h3 gap-1 font-bold text-white">
                   <CalendarCheck
@@ -136,7 +136,7 @@ const ProgramPage = ({}: ProgramPageProps) => {
                 </h4>
               </div>
             </GlowCard>
-            <li className="nav:row-span-2 row-start-5 nav:row-start-auto w-full max-w-[400px] nav:max-w-none mx-auto nav:mx-0">
+            <li className="md:row-span-2 row-start-5 min-h-[240px] pb-0 md:row-start-auto w-full max-w-[400px] md:max-w-none mx-auto md:mx-0">
               <GlowCard className="!w-full !h-full">
                 <div className="card-info-title px-5 py-4">
                   <h3 className="text-h3 gap-1 font-bold text-white">
@@ -181,7 +181,7 @@ const ProgramPage = ({}: ProgramPageProps) => {
                 </div>
               </GlowCard>
             </li>
-            <GlowCard className="xxl:!h-32 mx-auto nav:mx-0 !h-32 xl:!h-36 max-w-[400px] !w-full">
+            <GlowCard className="xxl:!h-32 mx-auto md:mx-0 !h-32 xl:!h-36 max-w-[400px] !w-full">
               <div className="card-info-title px-5 py-4">
                 <h3 className="text-h3 gap-1 font-bold text-white">
                   <AwardIcon
@@ -193,7 +193,7 @@ const ProgramPage = ({}: ProgramPageProps) => {
                 <h4>Nacisk na budowanie zarówno siły i sprawności.</h4>
               </div>
             </GlowCard>
-            <GlowCard className="xxl:!h-32 mx-auto nav:mx-0 !h-32 nav:!h-36 max-w-[400px] !w-full">
+            <GlowCard className="xxl:!h-32 mx-auto md:mx-0 !h-32 md:!h-36 max-w-[400px] !w-full">
               <div className="card-info-title px-5 py-4">
                 <h3 className="text-h3 gap-1 font-bold text-white">
                   <ArrowDownWideNarrow

@@ -37,8 +37,8 @@ const Layout = ({ children, className, ...props }: LayoutProps) => {
           content="powerlifting,strength training,fitness gains,powerlifting tips,strength training techniques,powerlifting routines,building strength,endurance workouts,personal records,transformation,fitness progress,lifting,gym, strength and conditioning,strength transformations,fitness community,powerlifting workouts,powerlifting competitions,strength and nutrition,fitness motivation,powerlifting mindset,injury prevention,competition preparation,powerlifting exercises,strength achievements, bodybuilding, dieticians, powerlifting inspiration, about me, competitions, siłownia, trójbój, zawody, blog o trójboju, dieta, trening siłowy, kulturystyka, wyciskanie leżąc, przysiad, martwy ciąg, jak trenować"
         />
         <meta name="author" content="Michal Mizia" />
-        <title>Life Gains - Podróż po Trójboju</title>
-        <meta property="og:title" content="Life Gains - Podróż po Trójboju" />
+        <title>Life Gains</title>
+        <meta property="og:title" content="Life Gains" />
         <meta property="og:site_name" content="Life Gains" />
         <meta property="og:url" content="life-gains.com" />
         <meta

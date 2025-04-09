@@ -61,7 +61,7 @@ export const ArticlePage = ({}: ArticlePageProps) => {
       </Helmet>
       <div className="mx-auto bg-white">
         {/* Progress Bar */}
-        <div className="progress-container">
+        <div className="progress-container !z-[100]">
           <div
             className="progress-bar"
             style={{ width: `${scrollProgress}%` }}
@@ -75,7 +75,7 @@ export const ArticlePage = ({}: ArticlePageProps) => {
             src={`/${article.frontmatter.image}`}
             alt={article.frontmatter.title}
           />
-          <header className="max-w-2xl mx-auto text-center z-10">
+          <header className="max-w-2xl container-md mx-auto text-center z-10">
             <p className="font-semibold relative top-1 text-sm text-accent-200">
               {article.frontmatter.date.getDate()}{" "}
               {article.frontmatter.date.toLocaleString("default", {

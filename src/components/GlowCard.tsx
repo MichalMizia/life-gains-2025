@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import React, { HTMLProps, useState } from "react";
 import "@/css/components.css";
 
-interface GlowCardProps extends HTMLProps<HTMLLIElement> {
+interface GlowCardProps extends HTMLProps<HTMLDivElement> {
   contentClassName?: string;
   isSection?: boolean;
   glowColor?: string;
@@ -46,7 +46,7 @@ const GlowCard = ({
   }
 
   return (
-    <li
+    <div
       {...props}
       style={
         {
@@ -59,7 +59,7 @@ const GlowCard = ({
       onMouseMove={(e) => handleMouseMove(e)}
     >
       <div className={cn("card-content", contentClassName!)}>{children}</div>
-    </li>
+    </div>
   );
 };
 

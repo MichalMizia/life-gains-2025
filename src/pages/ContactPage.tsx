@@ -28,7 +28,7 @@ const ContactPage = ({}: ContactPageProps) => {
         // @ts-expect-error
         netlify
         method="POST"
-        className="contact-form mx-auto mt-8 md:mt-12 lg:mt-16 bg-[#ffffff10] flex flex-col rounded-lg relative shadow-md shadow-[#00000030]"
+        className="contact-form mx-auto pb-10 my-8 md:my-12 lg:my-16 bg-[#ffffff10] flex flex-col rounded-[4px] max-w-[460px] w-full relative shadow-md shadow-[#00000030]"
       >
         <PinIcon className="w-6 h-6 absolute right-4 top-4" />
         <input
@@ -50,6 +50,7 @@ const ContactPage = ({}: ContactPageProps) => {
           onChange={(e) => setName(e.target.value)}
           value={name}
           required
+          className="w-full max-w-[400px]"
         />
         <input
           placeholder="Email"
@@ -60,6 +61,7 @@ const ContactPage = ({}: ContactPageProps) => {
           value={email}
           name="Email"
           required
+          className="w-full max-w-[400px]"
         />
         <span className="validation-text absolute left-1 top-1 text-xs">
           Podany adres email jest niepoprawny
@@ -72,14 +74,17 @@ const ContactPage = ({}: ContactPageProps) => {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             required
+            className="w-full max-w-[400px]"
           ></textarea>
         </div>
-        <Button
-          variant={"secondary"}
-          className="w-full mx-auto max-w-[400px] mt-8"
-        >
-          Wyślij!
-        </Button>
+        <div className="flex">
+          <Button
+            variant={"secondary"}
+            className="w-full mt-[28px] mb-[12px] mx-[24px] max-w-[400px] mt-8"
+          >
+            Wyślij!
+          </Button>
+        </div>
       </form>
     </main>
   );
