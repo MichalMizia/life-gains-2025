@@ -82,7 +82,7 @@ const ProgramPage = ({}: ProgramPageProps) => {
             <img
               src={"/images/program.webp"}
               alt="BreakOut Program Preview"
-              className="w-full h-fit m-auto"
+              className="!aspect-[16/9] w-screen lg:w-full h-fit m-auto"
             />
           </div>
         </div>

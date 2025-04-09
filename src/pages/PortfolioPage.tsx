@@ -26,7 +26,7 @@ const PortfolioPage = ({}: PortfolioPageProps) => {
   const portfolioItems = getPortfolioData();
 
   return (
-    <main className="pt-8 sm:py-8 relative md:py-10 lg:py-14">
+    <main className="pt-8 py-8 relative md:py-10 lg:py-14">
       <div className="container-md mb-6 lg:mb-8">
         <h1 className="text-h1 sm:text-5xl font-bold mb-2">Portfolio</h1>
         <p className="max-w-lg md:max-w-2xl lg:max-w-4xl">
