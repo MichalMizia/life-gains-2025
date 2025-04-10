@@ -1,11 +1,10 @@
-import { getPortfolioData } from "@/lib/articles";
-
 interface PortfolioPageProps {}
 
 const links: Record<string, string> = {
   "Document Managament App With Face Authentication (ESP32 Electronic lock, Next.JS Frontend, Face-Api, MongoDB)":
     "https://github.com/MichalMizia/security--",
-  "Life Gains (React.JS, Static Site Generation from Markdown)": "",
+  "Life Gains (React.JS, Static Site Generation from Markdown)":
+    "https://life-gains.com/portfolio",
   "Intro To Artificiall Intelligence Projects (9 mini projects, Python, ML)":
     "https://github.com/MichalMizia/wsi-projects",
   "Barbell Path and Speed Tracking (Python, OpenCV, ArUco Marker)":
@@ -23,8 +22,6 @@ const links: Record<string, string> = {
 };
 
 const PortfolioPage = ({}: PortfolioPageProps) => {
-  const portfolioItems = getPortfolioData();
-
   return (
     <main className="pt-8 py-8 relative md:py-10 lg:py-14">
       <div className="container-md mb-6 lg:mb-8">
@@ -45,12 +42,12 @@ const PortfolioPage = ({}: PortfolioPageProps) => {
 
       <div className="container-md px-4">
         <ul className="grid items-between justify-between w-full gap-2 list-disc">
-          {portfolioItems.map((item) => (
+          {Object.keys(links).map((item) => (
             <li
-              key={item.title}
+              key={item}
               className="!text-accent-200 translate-link w-fit !overflow-visible cursor-pointer"
             >
-              <a href={links[item.title] || ""}>{item.title}</a>
+              <a href={links[item]}>{item}</a>
             </li>
           ))}
         </ul>
